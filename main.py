@@ -2,7 +2,7 @@ import os
 import httpx
 
 url = "https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/CN-ip-cidr.txt"
-rsc_file = r"/opt/compose/caddy/www/cnip.rsc"
+rsc_file = r"release/cnip.rsc"
 
 with open(rsc_file, "w", encoding="utf-8") as f:
     f.write("/ip firewall address-list\nremove [find list=CN_IP]\n")
